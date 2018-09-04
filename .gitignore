@@ -21,3 +21,5 @@ Gemfile.lock
 \.ruby-*
 
 ## PROJECT::SPECIFIC
+
+.idea/

@@ -29,6 +29,7 @@ module USPS
         when '-2147219402'; InvalidStateError
         when '-2147219403'; MultipleAddressError
         when '-2147218900'; InvalidImageTypeError
+        when '408'; RequestTimeoutError
         else              ; Error
         end
       end
@@ -38,6 +39,7 @@ module USPS
   class AuthorizationError < Error; end
 
   class ValidationError < Error; end
+  class RequestTimeoutError < Error; end
   class InvalidCityError < ValidationError; end
   class InvalidStateError < ValidationError; end
   class AddressNotFoundError < ValidationError; end

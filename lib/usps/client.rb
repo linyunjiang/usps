@@ -15,6 +15,8 @@ module USPS
         }
       })
 
+      raise Error.for_code('408').new('Verify address request timeout.', '408', nil) if response.timed_out?
+
       # Parse the request
       xml = Nokogiri::XML.parse(response.body)
 

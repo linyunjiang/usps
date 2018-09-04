@@ -14,3 +14,4 @@ module USPS
     alias :testing? :testing
   end
 end
+
